@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #676a6c;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body label {
+    color: #7f7f7f;
+  }
+  
+  .container--default {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 5%;
+    width: 90%;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, 0.15),
+      0 8px 9px -5px hsla(0, 0%, 8%, 0.06) !important;
+  }
+  .container--default .infoBasic--text--area {
+    margin-right: 2%;
+  }
+  .infoBasic--text--area label {
+    display: block;
+  }
+  .container--default textarea,
+  .container--default input {
+    background-color: #f4f4f6;
+    padding: 1rem;
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+  }
+  .container--default textarea {
+    height: auto;
+  }
+  .container--default .image--area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  .container--default .image--area .upload-imagem{
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    width: 50%;
+  }
+  .container--default .image--area img {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    padding: 7%;
+    border-radius: 50%;
+    background-color: #f4f4f6;
+    cursor: pointer;
+  }
+  .form-row {
+    margin: 15px 0;
+  }
+  .form-row-3 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-row-3 > div {
+    width: 28%;
+  }
+  .form-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7px;
+  }
+  .container--default p.title {
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+    color: #676a6c;
+  }
+
+
+/* IGREDIENTES */
+
+
+  .ingredientes--table--area p {
+  font-weight: 400;
+  color: #000;
+  }
+  .ingredientes--table--area .item {
+    margin-top: 1%;
+  }
+  .ingredientes--table--area .item div:first-child {
+    margin-left: 0px;
+  }
+  .ingredientes--table--area .item div {
+    background-color: #f4f4f6;
+    margin-left: 10px;
+  }
+  .ingredientes--table--area .item p {
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  .item .name--item {
+    width: 45%;
+    padding-left: 1%;
+  }
+  .item .peso {
+    width: 45%;
+  }
+  .item .peso p:first-child {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+  .item .peso--total--item {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ingredientes--table--area .item {
+    width: 100%;
+    display: flex;
+  }
+  .item .peso {
+    display: flex;
+    flex-direction: row;
+  }
+  .resultados--receita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+  }
+  .resultados--receita div {
+    margin-top: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .resultados--receita div p {
+  color: #000;
+  }
+  .container--default.ingredientes {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 5%;
+    width: 90%;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, 0.15),
+      0 8px 9px -5px hsla(0, 0%, 8%, 0.06) !important;
+  }
+  .container--default .icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5%;
+    grid-column: 1/-1;
+  }
+  .container--default .icons svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 1%;
+    cursor: pointer;
+  }
+
+
+/* CONTAINER PREPARO */
+
+
+  .container--default.preparo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+  }
+  .container--default.preparo span {
+    width: 60px;
+    height: 50px;
+    margin-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f6;
+  }
+  .container--default.preparo li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .container--default.preparo li button {
+    background-color: #FFF;
+    border: none;
+    margin-left: 1%;
+  }
+  .container--default.preparo li button svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .container--default.preparo li button svg path:hover {
+    color: #3cb24a;
+    cursor: pointer;
+  }
+
+  .container--default.preparo #list label {
+    width: 60px;
+    height: 50px;
+    margin-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f6;
+  }
+  .container--default.preparo #list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .container--default.preparo #list li button {
+  background-color: #FFF;
+  border: none;
+  margin-left: 1%;
+  }
+  .container--default.preparo #list li button svg {
+    width: 30px;
+    height: 30px;
+    color: #3cb24a;
+    cursor: pointer;
+  }
+
+
+/* MEDIDAS CASEIRAS */
+
+
+  .porcoes--medidasCaseiras {
+    display: flex;
+    width: 90%;
+    gap: 3%;
+    margin-bottom: 10%;
+  }
+  .porcoes--medidasCaseiras label {
+    color: #7f7f7f;
+  }
+  .porcoes--medidasCaseiras p.title {
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+    margin: 2%;
+  }
+
+  .porcoes--medidasCaseiras .porcoes {
+    border-radius: 10px;
+    width: 50%;
+    padding: 1%;
+    height: 100%;
+    box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, 0.15),
+      0 8px 9px -5px hsla(0, 0%, 8%, 0.06) !important;
+  }
+  .porcoes--medidasCaseiras .porcoes .porcao--porcoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 2%;
+    margin-bottom: 10%;
+  }
+  .porcoes--medidasCaseiras .porcoes .porcao--porcoes input {
+    width: 100%;
+    background-color: #f4f4f6;
+    padding: 8px;
+    border: none;
+  }
+  .porcoes--medidasCaseiras .porcoes .numero--porcoes {
+    grid-column: 1/-1;
+    margin-right: 10%;
+    margin-left: 2%;
+    margin-bottom: 10%;
+  }
+  .porcoes--medidasCaseiras .porcoes .numero--porcoes input {
+    background-color: #f4f4f6;
+    width: 100%;
+    padding: 8px;
+    border: none;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-main {
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    padding-left: 3%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+    border-radius: 10px;
+    box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, 0.15),
+        0 8px 9px -5px hsla(0, 0%, 8%, 0.06) !important;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-main p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    grid-column: 1/-1;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 1.3rem;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-main p button {
+    display: flex;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-main p svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 2%;
+    color: #676a6c;
+    cursor: pointer;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-main input {
+    background-color: #f4f4f6;
+    width: 100%;
+    border: none;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-secd {
+    display: none;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    padding-left: 3%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, 0.15),
+        0 8px 9px -5px hsla(0, 0%, 8%, 0.06) !important;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-secd div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-main p button,
+  .porcoes--medidasCaseiras .micronutrientes-secd p button {
+    background-color: #FFF;
+    border: none;
+  }
+
+  .porcoes--medidasCaseiras .micronutrientes-main p.title-micro input#title-micro-main{
+    background-color: #3cb24a;
+    text-align: center;
+    border: none;
+    width: 60%;
+    cursor: pointer;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-secd p svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 2%;
+    color: #676a6c;
+    cursor: pointer;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-secd p.title-micro {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    font-size: 1.3rem;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-secd p.title-micro input#title-micro-secd{
+    background-color: #3cb24a;
+    text-align: center;
+    border: none;
+    width: 60%;
+    cursor: pointer;
+  }
+  .porcoes--medidasCaseiras .micronutrientes-secd div.gray {
+    background-color: #f4f4f6;
+  }
+
+
+
+/* BREAK POINTS */
+
+
+@media (max-width: 1000px) {
+    *{
+      font-size: 13px;
+    }
+    .container--default{
+    display: flex;
+    flex-direction: column-reverse;
+    }
+    .container--default .image--area {
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+    .container--default.ingredientes {
+      display: flex;
+      flex-direction: column;
+    }
+    .porcoes--medidasCaseiras .porcoes .porcao--porcoes{
+      display: flex;
+      flex-direction: column;
+    }
+    .porcoes--medidasCaseiras .porcoes .porcao--porcoes div input{ 
+      margin-bottom: 10%;
+    }
+}

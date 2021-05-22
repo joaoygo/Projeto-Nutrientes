@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="container--default">
+        <div class="infoBasic--text--area">
+          <p class="title">Informações Basicas</p>
+          <div class="form-row">
+            <label for="nome">
+              Nome
+            </label>
+            <input type="text" id="nome" />
+          </div>
+          <div class="form-row">
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao"></textarea>
+          </div>
+          <div class="form-row form-row-3">
+            <div>
+              <label for="temp--preparo">Tempo de preparo</label>
+                <input type="text" placeholder="Ex.: HH:MM" data-mask="00:00" maxlength="5" autocomplete="on" />
+            </div>
+      
+            <div>
+              <label for="peso">Peso total da receita</label>
+              <div class="form-grid-2">
+                <input type="text" id="peso" oninput="PesoMedioReceita()"/>
+                <input type="text" id="medida" />
+              </div>
+            </div>
+      
+            <div>
+              <label for="num-porcoes">Número de porções</label>
+              <input type="text" id="num-porcoes" oninput="ValueNumPocoes(), PesoMedioReceita()" />
+            </div>
+          </div>
+      
+          <div>
+            <label for="categoria">Caregoria</label>
+            <input type="text" id="categoria" style="width: 100%;" />
+          </div>
+        </div>
+        <div class="image--area">
+            <form class="upload-imagem">
+                <input type="file" class="upload" required>
+              </form>
+              
+              <div>
+                <img class="imagem" src="./assets/IconSand.png" alt="Sua imagem" width="350" height="150">
+              </div>
+              <div>
+                <button class="btnAtualiza">Atualiza imagem</button>
+              </div>
+        </div>
+    </div>
+
+    <div class="container--default ingredientes">
+            <div class="ingredientes--table--area">
+                <p class="title">Ingredientes</p>
+                <div class="item">
+                    <div class="name--item">
+                        <p>arroz integral cozido</p>
+                    </div>
+                    <div class="peso">
+                        <p class="quatidade--item">3</p>
+                        <p class="desc-medida">Gramas</p>
+                    </div>
+                    <div class="peso--total--item">
+                        <p class="peso--total">3g</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="name--item">
+                        <p>Feijão, carioca, cozido</p>
+                    </div>
+                    <div class="peso">
+                        <p class="quatidade--item">2</p>
+                        <p class="desc-medida">Colher(es) de sopa cheia</p>
+                    </div>
+                    <div class="peso--total--item">
+                        <p class="peso--total">30g</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="name--item">
+                        <p>Frango, peito, sem pele, cozido</p>
+                    </div>
+                    <div class="peso">
+                        <p class="quatidade--item">1</p>
+                        <p class="desc-medida">Filé(s) médio(s)</p>
+                    </div>
+                    <div class="peso--total--item">
+                        <p class="peso--total">100g</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="name--item">
+                        <p>Alface, americano, crua</p>
+                    </div>
+                    <div class="peso">
+                        <p class="quatidade--item">4</p>
+                        <p class="desc-medida">Folha(s) pequenas(s)</p>
+                    </div>
+                    <div class="peso--total--item">
+                        <p class="peso--total">20g</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="name--item">
+                        <p>Brócolis, cozido</p>
+                    </div>
+                    <div class="peso">
+                        <p class="quatidade--item">3</p>
+                        <p class="desc-medida">Buquê(s)</p>
+                    </div>
+                    <div class="peso--total--item">
+                        <p class="peso--total">45g</p>
+                    </div>
+                    </div>
+                <div class="item">
+                    <div class="name--item">
+                        <p>Azeite, de oliva, extra virgem</p>
+                    </div>
+                    <div class="peso">
+                        <p class="quatidade--item">0.5</p>
+                        <p class="desc-medida">Colher(es) de sopa</p>
+                    </div>
+                    <div class="peso--total--item">
+                        <p class="peso--total">4g</p>
+                    </div>
+                </div>
+            </div>
+            <div class="resultados--receita">
+                <div class="proteinas">
+                    <p>33.6</p>
+                    <p>Proteinas (g)</p>
+                </div>   
+
+                <div class="carboidratos">
+                    <p>7</p>
+                    <p>Carboidratos (g)</p>
+                </div>   
+
+                <div class="lipideos">
+                    <p>7.7</p>
+                    <p>Lipídios (g)</p>
+                </div>   
+
+                <div class="calorias">
+                    <p>238.1Kcal</p>
+                    <p>100%</p>
+                </div>
+                
+            </div>  
+            <div class="icons">
+                <svg stroke="currentColor" 
+                    fill="currentColor" 
+                    stroke-width="0" 
+                    viewBox="0 0 576 512" 
+                    height="1em" width="1em" 
+                    xmlns="http://www.w3.org/2000/svg">
+                <path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"></path></svg>
+            
+                <svg stroke="currentColor" 
+                    fill="currentColor"
+                    stroke-width="0" 
+                    viewBox="0 0 512 512" 
+                    height="1em" width="1em" 
+                    xmlns="http://www.w3.org/2000/svg">
+                <path d="M298.2 156.6c-52.7-25.7-114.5-10.5-150.2 32.8l55.2 55.2c6.3 6.3 6.3 16.4 0 22.6-3.1 3.1-7.2 4.7-11.3 4.7s-8.2-1.6-11.3-4.7L130.4 217 2.3 479.7c-2.9 6-3.1 13.3 0 19.7 5.4 11.1 18.9 15.7 30 10.3l133.6-65.2-49.2-49.2c-6.3-6.2-6.3-16.4 0-22.6 6.3-6.2 16.4-6.2 22.6 0l57 57 102-49.8c24-11.7 44.5-31.3 57.1-57.1 30.1-61.7 4.5-136.1-57.2-166.2zm92.1-34.9C409.8 81 399.7 32.9 360 0c-50.3 41.7-52.5 107.5-7.9 151.9l8 8c44.4 44.6 110.3 42.4 151.9-7.9-32.9-39.7-81-49.8-121.7-30.3z"></path></svg>
+                
+                </div>
+    </div>
+    <div class="container--default preparo ">
+        <p class="title">Ingredientes</p>
+        <ul class="ingredienteList">
+            <li>
+                <span>1</span>
+                    <input type="text" id="newList" oninput="addNewItem(event)" />
+            </li>
+        </ul>
+        <div id="list">
+        </div>
+    </div>
+
+    <div class="porcoes--medidasCaseiras">
+        <div class="porcoes">
+            <p class="title">Poção e medidas caseiras</p>
+            <div class="porcao--porcoes">
+                <div class="name--porcao">
+                    <label for="name-porcao">Nome da porção</label>
+                    <input type="text" id="name-porcao" value="Porção"/>
+                </div>
+                <div class="name--porcoes">
+                    <label for="name-porcoes">Nome da porção no plural</label>
+                    <input type="text" id="name-porcoes" value="Porcões"/>
+                </div>
+            </div>
+            <div class="numero--porcoes">
+                <label for="numb-porcoes">Número de porções</label>
+                <input type="text" id="numb-porcoes" />
+            </div>
+            <div class="numero--porcoes">
+                <label for="peso-porcao">Peso de cada porção</label>
+                <input type="text" id="peso-porcao" />
+            </div>
+        </div>
+        <div class="micronutrientes-main">
+            <p id="title-micro" class="title-micro">
+                <button onclick="handleContainer()">
+                    <svg stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M16 16v-4l5 5-5 5v-4H4v-2h12zM8 2v3.999L20 6v2H8v4L3 7l5-5z"></path></g>
+                    </svg>
+                </button> 
+                <input id="title-micro-main" class="title-micro-main" type="text" value="Micronutrientes" readonly/>
+            </p>
+            
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+            <input type="text" id="" />
+        </div>
+        <div class="micronutrientes-secd">
+            <p class="title-micro">
+                <button onclick="handleContainer()">
+                    <svg stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M16 16v-4l5 5-5 5v-4H4v-2h12zM8 2v3.999L20 6v2H8v4L3 7l5-5z"></path></g>
+                    </svg>
+                </button>  
+                <input id="title-micro-secd" class="title-micro-secd" type="text" value="Micronutrientes" readonly/>
+            </p>
+            
+                <div class="item gray">
+                    <p>Carboidratos</p>
+                    <p>10g</p>
+                </div>
+                <div class="item">
+                    <p>Proteínas</p>
+                    <p>20g</p>
+                </div> 
+                <div class="item gray">
+                    <p>Lípideos</p>
+                </div> 
+                <div class="item">
+                    <p>Calorias</p>
+                </div>
+
+            
+        </div>
+    </div>
+</body>
+
+<script src="./index.js"></script>
+</html>
