@@ -130,13 +130,12 @@ function ValueNumPocoes(){
 }
 
 function PesoMedioReceita(){
-  
   const PesodaReceita = document.getElementById('peso').value
   const Numero_de_porcoes = document.getElementById('num-porcoes').value;
   const Media_peso = document.getElementById('peso-porcao')
 
     if(PesodaReceita > 0 && Numero_de_porcoes > 0){
-    Media_peso.value = (PesodaReceita / Numero_de_porcoes)
+    Media_peso.value = (PesodaReceita / Numero_de_porcoes).toFixed(2)
     }
     else{
       Media_peso.value = ''
