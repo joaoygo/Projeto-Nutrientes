@@ -359,7 +359,7 @@
   }
 
   .porcoes--medidasCaseiras .micronutrientes-main p.title-micro input#title-micro-main{
-    background-color: #3cb24a;
+    background-color: #FFF;
     text-align: center;
     border: none;
     width: 60%;
@@ -380,7 +380,7 @@
     font-size: 1.3rem;
   }
   .porcoes--medidasCaseiras .micronutrientes-secd p.title-micro input#title-micro-secd{
-    background-color: #3cb24a;
+    background-color: #FFF;
     text-align: center;
     border: none;
     width: 60%;
